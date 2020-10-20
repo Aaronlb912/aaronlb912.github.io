@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "IT 390 Site",
-    "currentPage": "index.html",
+    "currentPage": "page2.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -40,8 +40,8 @@
         "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
       }
     ],
-    "uniqCompNum": 23,
-    "versionPublish": "5.1.4",
+    "uniqCompNum": 27,
+    "versionPublish": "5.2.0",
     "imageResize": true,
     "screenshot": "screenshot.png",
     "favicon": false,
@@ -1476,6 +1476,72 @@
           "_isUserblock": true,
           "_sourceTheme": "mobirise5",
           "_cid": "sbKdnJtMjm",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-link.active:focus": {
+              "outline": "none"
+            },
+            ".nav-tabs": {
+              "flex-wrap": "wrap",
+              "border-bottom": "1px solid @activeColor"
+            },
+            ".nav-item": {
+              "@media (max-width: 767px)": {
+                "width": "100%",
+                "margin": "0"
+              }
+            },
+            ".nav-tabs .nav-link": {
+              "transition": "all .5s",
+              "border": "none",
+              "border-bottom": "3px solid transparent",
+              "border-radius": "0 !important",
+              "&:not(.active)": {
+                "color": "@tabsColor"
+              }
+            },
+            ".nav-tabs .nav-item": {
+              "margin-right": "1.5rem"
+            },
+            ".nav-link, .nav-link.active": {
+              "padding": "1rem 0",
+              "background-color": "transparent"
+            },
+            ".nav-tabs .nav-link.active": {
+              "color": "@activeColor",
+              "border-bottom": "3px solid @activeColor"
+            },
+            "H4": {
+              "text-align": "center"
+            },
+            "H3": {
+              "text-align": "left"
+            },
+            "H2": {
+              "text-align": "left"
+            }
+          },
+          "_name": "tabs1",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"tabs content18\" group=\"Content\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-tabs\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"6\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"8\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Tabs</header>\n        <select title=\"Count\" name=\"bootstrapTabs\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"color\" name=\"tabsColor\" title=\"Color\" value=\"#000000\">\n        <input type=\"color\" name=\"activeColor\" title=\"Active Color\" value=\"#6592e6\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay&&bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\" mbr-if=\"showTitle || showSubtitle\">\n            <div class=\"col-12 col-md-{{textWidth}}\">\n                <h3 class=\"mbr-section-title mb-0 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\"></h3>\n                <h4 class=\"mbr-section-subtitle mb-0 mt-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\">Tabs Subtitle</h4>\n            </div>\n        </div>\n        <div class=\"row justify-content-center mt-4\">\n            <div class=\"col-12 col-md-{{textWidth}}\">\n                <ul class=\"nav nav-tabs mb-4\" role=\"tablist\">\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item first mbr-fonts-style\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style show active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-n_tab0\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            <strong>Description</strong>\n                        </a></li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 1\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-n_tab1\" data-app-placeholder=\"Type Text\" aria-selected=\"true\"><strong>How to Play</strong></a></li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 2\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-n_tab2\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            <strong>Suggestions</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 3\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" href=\"#tabs1-n_tab3\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            <strong>Phases</strong>\n                        </a></li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\">\n                        <a class=\"nav-link mbr-fonts-style\" role=\"tab\" data-toggle=\"tab\" href=\"#tab5\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            <b>Design</b>\n                        </a>\n                    </li>\n                    <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 5\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\">\n                        <a class=\"nav-link mbr-fonts-style\" role=\"tab\" data-toggle=\"tab\" href=\"#tab6\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                            <b>Architecture</b>\n                        </a>\n                    </li>\n                </ul>\n                <div class=\"tab-content\">\n                    <div id=\"tab1\" class=\"tab-pane in active\" role=\"tabpanel\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Role play games are one of the most known game genres that has been around for quite a while. The basic structure of these type of games consist of completing quests/missions, which are different tasks the player can do for non-player character (NPC), to gain items, in game currency, and/or experience points to level up. NPCs, filling the RPG world, are non-playable characters that are similar to the player, but are programmed AI. In game currency can be used to purchase items, such as weapons and armor, from in game merchants. Experience points can be used to enhance player skills, in order to gain new abilities or higher stats.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab2\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 1\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    The way to play most generic RPGs is very simple. Usually, when a player loads in the game for the first time, they will be given a tutorial, where they can gain familiarity with the game controls and mechanics. Then, they will be asked to complete an endless series of missions, for different rewards. As mentioned in the description, most of these rewards consist of either items, in game currency, and/or exp points. It is up to the player to power themselves up with what has been given to them or purchase additional items. At some point, the player will have to face one or multiple bosses, to test their strength. Assuming they achieve victory, the player could gain better items to help them power up even more. </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab3\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 2\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\"><u></u></p><h2><i style><b>The Witcher III: Wild Hunt – 93% positive</b></i></h2><br><u><br></u><u>\n                                <img src=\"@PROJECT_PATH@/assets/images/logo-witcher3-en-600x211.jpg\" alt=\"Witcher 3 Logo\">\n</u><br><br><i><h3>Ragequit.gr’s Review:</h3>\n</i><br>A monumental achievement of staggeringly aching beauty, the Witcher III stands proudly as the greatest video game of all time, regardless of genre. Geralt's final, epic ride, is the high water-mark by which all future games will be judged and found lacking. Indeed, it's only disadvantage is that it completely ruins every other title on the market right now by nailing every single aspect of game design with almost supernatural clarity and perfection. If you play one video game in your life, make sure it's this one.&nbsp;<br><i><br><h3>DarkZero’s Review:</h3>\n</i><br>The Witcher 3: Wild Hunt is more than just an incredible game that successfully brings lush visuals, tactical combat and a captivating world untainted with the issues that games of similar nature have when building such huge open spaces. It is also a respectful closure for Geralt, the series and its fans.&nbsp;<br><i><h3><br>GRYOnline.pl’s Review:</h3>\n</i><br>Witcher 3 is an excellent game with tons of strong points that shine over all minor issues. The PC version is extremely pretty, works great and has room for some interesting alterations in terms of the visual side. The content is, of course, great and extremely diverse: The Wild Hunt is pretty much several games merged into one. Some quests are so long and interesting that they could become a separate game! It's a true gem and it's hard to think what will happen when the developers introduce the REDKit.&nbsp;<br><p><u></u></p><h2><b style><i style>Diablo III – 88% positive\n</i></b></h2><img src=\"@PROJECT_PATH@/assets/images/diablo-3-logo-581x300.jpg\" alt=\"Diablo 3\" width=\"200px;\" height=\"300px;\"><br><br><i><h3>Polygon’s Review:</h3>\n</i><br>Games this thoughtfully crafted don't happen very often, and the care that Blizzard has taken with Diablo 3 shows in every facet of its design and execution. It might not be perfect, but after 45 hours, I'm not sure where it missteps, and after 45 hours, I feel like I've only scratched the surface of what it has to offer. Diablo 3 is almost evil in how high a bar it's set for every PC action RPG to follow, and I wouldn't be surprised to see that bar remain for a very long time.\n<br><i><h3><br>Gameblog.fr’s Review:</h3></i>\n<br>Blizzard had to compromise to manage the expectations of a larger audience. Diablo III still manages to remain truthful to its roots, while still increasing accessibility for newcomers. Some players might be annoyed by those revisions of the formula, but the truth is that Diablo III still is the benchmark of modern hack'n slash games we were praying to get, thanks to incredible production values, polish, sound work and content.\n<br><i><h3><br>Eurogamer Portugal’s Review:</h3>\n</i><br>It is true that Blizzard is not a company known for being innovative, but there is a word which I believe defines their games: competence. Diablo is the best of its genre and is there to last for several years.&nbsp;<br><p><br><b><i></i></b></p><h2><b><i>Final Fantasy XV – 85% positive</i></b></h2><b><i><img src=\"@PROJECT_PATH@/assets/images/finalfantasyxv-800x331.jpg\" alt>\n<br></i></b><i><br><h3>Gameblog.fr’s Review:</h3>\n</i><br>Final Fantasy XV Windows Edition is the most complete and the most beautiful version of the loveable but imperfect RPG. If you own a good PC and are interested in Noctis' adventures, you can jump right in without any fear, just be sure its messy combat system, generic quests and quite strange scenario won't bother you.\n<br><br><i><h3>Wccftech’s Review:\n</h3></i><br>Final Fantasy XV Windows Edition is the only, true definitive edition of the Square Enix Japanese Role-Playing Game, thanks to the superior graphics quality and several gameplay and story enhancements, which are also included in the consoles' Royal Edition.\n<br><br><i><h3>Impulsegamer’s Review:\n                                </h3></i><br>Unlike many of its siblings, Final Fantasy XV is not really about empires or kings. It isn’t about magic or monsters—or even really about people. Final Fantasy XV is about four friends, the bond they share, and the power that such friendships have to improve the world.&nbsp;<br><p></p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab4\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 3\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Free Website Builder offers a huge collection of 2500+ website blocks, templates and\n                                    themes with thousands flexible options. Combine blocks from different themes to\n                                    create a unique mix.</p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab5\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 4\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Free Website Builder offers a huge collection of 2500+ website blocks, templates and\n                                    themes with thousands flexible options. Combine blocks from different themes to\n                                    create a unique mix.\n                                </p>\n                            </div>\n                        </div>\n                    </div>\n                    <div id=\"tab6\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 5\">\n                        <div class=\"row\">\n                            <div class=\"col-md-12\">\n                                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\">\n                                    Free Website Builder offers a huge collection of 2500+ website blocks, templates and\n                                    themes with thousands flexible options. Combine blocks from different themes to\n                                    create a unique mix.</p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "sdZ1TsMG3Q",
+          "_anchor": "tabs1-n",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
           "_protectedParams": [],
           "_global": false,
           "_once": false,
