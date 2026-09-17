@@ -1,0 +1,78 @@
+name: Register daily tool
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: GitHub repo name (same as the Pages folder)
+        required: true
+        type: string
+      label:
+        description: Short label (the pizza check)
+        required: true
+        type: string
+      blurb:
+        description: One sentence for the home card
+        required: true
+        type: string
+      about:
+        description: Two sentences for the tool page
+        required: true
+        type: string
+      hint:
+        description: Optional extra line on the card
+        required: false
+        type: string
+      demo:
+        description: Live Pages URL
+        required: false
+        type: string
+      look:
+        description: Heading above screenshots
+        required: false
+        type: string
+      try:
+        description: Line above the iframe
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Add tool and rebuild
+        working-directory: scripts
+        env:
+          REPO: ${{ inputs.repo }}
+          LABEL: ${{ inputs.label }}
+          BLURB: ${{ inputs.blurb }}
+          ABOUT: ${{ inputs.about }}
+          HINT: ${{ inputs.hint }}
+          DEMO: ${{ inputs.demo }}
+          LOOK: ${{ inputs.look }}
+          TRY: ${{ inputs.try }}
+        run: |
+          args=(--repo "$REPO" --label "$LABEL" --blurb "$BLURB" --about "$ABOUT")
+          if [ -n "$HINT" ]; then args+=(--hint "$HINT"); fi
+          if [ -n "$DEMO" ]; then args+=(--demo "$DEMO"); fi
+          if [ -n "$LOOK" ]; then args+=(--look "$LOOK"); fi
+          if [ -n "$TRY" ]; then args+=(--try "$TRY"); fi
+          python register_tool.py "${args[@]}"
+      - name: Commit hub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tools.json index.html tools images
+          if git diff --staged --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "add ${{ inputs.repo }} to the hub"
+          git push
