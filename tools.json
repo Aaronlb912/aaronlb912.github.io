@@ -274,6 +274,25 @@
           "caption": "A notebook for what happened in a meeting."
         }
       ]
+    },
+    {
+      "repo": "lastpaid",
+      "label": "Last paid",
+      "blurb": "What you paid last time, before you call.",
+      "about": "You write down last pay for stone or parts you buy twice a year. The green number is last price. Click a row for the older prices on a guest check.",
+      "hint": "Find the item. The green number is last pay.",
+      "demo": "https://aaronlb912.github.io/lastpaid/",
+      "iframe": "https://aaronlb912.github.io/lastpaid/",
+      "look": "Look",
+      "try": "Same page, sitting in a box.",
+      "launch": "Launch the demo",
+      "shots": [
+        {
+          "src": "/images/lastpaid.png",
+          "alt": "Last paid",
+          "caption": "What you paid last time, before you call."
+        }
+      ]
     }
   ]
 }
