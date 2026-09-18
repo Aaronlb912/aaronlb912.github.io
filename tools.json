@@ -7,9 +7,18 @@
       "hint": "A live book you can poke.",
       "about": "A shop book for one week. Fake names on Elm Street Cuts. Nothing on the page sends mail.",
       "facts": [
-        {"label": "What you do", "text": "Open a day. Write a name and a time. Mark here, no-show, or cancel."},
-        {"label": "Sample", "text": "Elm Street Cuts, week of September 14. Priya at 9, Luis at 11:15. Next up is Rae at 10."},
-        {"label": "Where it stays", "text": "This browser. Nothing on the page sends mail."}
+        {
+          "label": "What you do",
+          "text": "Open a day. Write a name and a time. Mark here, no-show, or cancel."
+        },
+        {
+          "label": "Sample",
+          "text": "Elm Street Cuts, week of September 14. Priya at 9, Luis at 11:15. Next up is Rae at 10."
+        },
+        {
+          "label": "Where it stays",
+          "text": "This browser. Nothing on the page sends mail."
+        }
       ],
       "steps": [
         "Click Wednesday.",
@@ -42,9 +51,18 @@
       "hint": "Pottery on the shelf. Click a print in the demo.",
       "about": "Pictures stay in this browser. Open a gallery, drop a file, write a caption, download JSON if you want a copy.",
       "facts": [
-        {"label": "What you do", "text": "Add a picture. Write a caption. Download JSON if you want a copy."},
-        {"label": "Sample", "text": "Mill Street Pottery is loaded. Bisque waiting is empty on purpose. Names are fake."},
-        {"label": "Where it stays", "text": "This browser. Nothing uploads to a server."}
+        {
+          "label": "What you do",
+          "text": "Add a picture. Write a caption. Download JSON if you want a copy."
+        },
+        {
+          "label": "Sample",
+          "text": "Mill Street Pottery is loaded. Bisque waiting is empty on purpose. Names are fake."
+        },
+        {
+          "label": "Where it stays",
+          "text": "This browser. Nothing uploads to a server."
+        }
       ],
       "steps": [
         "Open Mill Street Pottery.",
@@ -76,9 +94,18 @@
       "hint": "A photo studio week, fake names.",
       "about": "A board you can drag. North Loop Photo is the sample studio. Sign in if you want it on your phone too.",
       "facts": [
-        {"label": "What you do", "text": "Make columns. Put jobs on cards. Drag a card to the next pile."},
-        {"label": "Sample", "text": "North Loop Photo. Intake, In edit, Ready for pickup. Rae is rush. Eli is paid."},
-        {"label": "Where it stays", "text": "This browser. Sign in if you want it on your phone too."}
+        {
+          "label": "What you do",
+          "text": "Make columns. Put jobs on cards. Drag a card to the next pile."
+        },
+        {
+          "label": "Sample",
+          "text": "North Loop Photo. Intake, In edit, Ready for pickup. Rae is rush. Eli is paid."
+        },
+        {
+          "label": "Where it stays",
+          "text": "This browser. Sign in if you want it on your phone too."
+        }
       ],
       "steps": [
         "Open North Loop Photo.",
@@ -110,9 +137,18 @@
       "hint": "Four people, garlic knots, the split already done.",
       "about": "Four people at West 12th Pizza. Tip is on the food, before tax. Change a line and watch who owes shift.",
       "facts": [
-        {"label": "What you do", "text": "Add people and lines. See who owes what."},
-        {"label": "Sample", "text": "West 12th Pizza. Dana, Eli, Pat, Rae. Large pepperoni is for everyone. Total $52.61."},
-        {"label": "Where it stays", "text": "This browser. Tip is on the food, before tax. Nothing sends mail."}
+        {
+          "label": "What you do",
+          "text": "Add people and lines. See who owes what."
+        },
+        {
+          "label": "Sample",
+          "text": "West 12th Pizza. Dana, Eli, Pat, Rae. Large pepperoni is for everyone. Total $52.61."
+        },
+        {
+          "label": "Where it stays",
+          "text": "This browser. Tip is on the food, before tax. Nothing sends mail."
+        }
       ],
       "steps": [
         "Uncheck a name on a line.",
@@ -145,9 +181,18 @@
       "hint": "Click Hours and Contact in the demo. That is the tour.",
       "about": "A fake clerk desk in Ashland, Ohio. This is the site the screenshot tests chew on. The runner itself is in the repo, on your machine.",
       "facts": [
-        {"label": "What you do", "text": "Click through a fake clerk desk. The screenshot tests run on your machine."},
-        {"label": "Sample", "text": "City of Ashland, Ohio. Counter hours, council packets for September 16, dog licenses for 2027."},
-        {"label": "Where it stays", "text": "These pages are the fixture. The runner is in the repo, on your machine."}
+        {
+          "label": "What you do",
+          "text": "Click through a fake clerk desk. The screenshot tests run on your machine."
+        },
+        {
+          "label": "Sample",
+          "text": "City of Ashland, Ohio. Counter hours, council packets for September 16, dog licenses for 2027."
+        },
+        {
+          "label": "Where it stays",
+          "text": "These pages are the fixture. The runner is in the repo, on your machine."
+        }
       ],
       "steps": [
         "Click Hours.",
@@ -170,6 +215,25 @@
           "src": "/images/vrt.png",
           "alt": "City Clerk home with counter hours and dog license notice",
           "caption": "Home. Phone is a fake 555."
+        }
+      ]
+    },
+    {
+      "repo": "tables",
+      "label": "Tables",
+      "blurb": "Named columns. Click a cell. Add a row.",
+      "about": "A table you can edit. Named columns, more than one table, JSON and CSV in and out. Copy src/lib/ into a React app you already have.",
+      "hint": "Drop src/lib/ into a React app you already have.",
+      "demo": "https://aaronlb912.github.io/tables/",
+      "iframe": "https://aaronlb912.github.io/tables/",
+      "look": "Look",
+      "try": "Same page, sitting in a box.",
+      "launch": "Launch the demo",
+      "shots": [
+        {
+          "src": "/images/tables.png",
+          "alt": "Tables",
+          "caption": "Named columns. Click a cell. Add a row."
         }
       ]
     }
