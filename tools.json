@@ -236,6 +236,25 @@
           "caption": "Named columns. Click a cell. Add a row."
         }
       ]
+    },
+    {
+      "repo": "expires",
+      "label": "Expires",
+      "blurb": "Papers that die on a date. Late ones show up as a mailed notice.",
+      "about": "A desk for papers that expire. Late ones sit as a mailed notice. Renew rolls the term. Copy src/lib/ into a React app you already have.",
+      "hint": "Drop src/lib/ into a React app you already have.",
+      "demo": "https://aaronlb912.github.io/expires/",
+      "iframe": "https://aaronlb912.github.io/expires/",
+      "look": "Look",
+      "try": "Same page, sitting in a box.",
+      "launch": "Launch the demo",
+      "shots": [
+        {
+          "src": "/images/expires.png",
+          "alt": "Expires",
+          "caption": "Papers that die on a date. Late ones show up as a mailed notice."
+        }
+      ]
     }
   ]
 }
