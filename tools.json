@@ -255,6 +255,25 @@
           "caption": "Papers that die on a date. Late ones show up as a mailed notice."
         }
       ]
+    },
+    {
+      "repo": "decided",
+      "label": "Decided",
+      "blurb": "A notebook for what happened in a meeting.",
+      "about": "Leftover jobs sit on the left. Calls the group already made sit on the right. Paste an email and keep the lines that matter.",
+      "hint": "Still open on the left. Decided on the right.",
+      "demo": "https://aaronlb912.github.io/decided/",
+      "iframe": "https://aaronlb912.github.io/decided/",
+      "look": "Look",
+      "try": "Same page, sitting in a box.",
+      "launch": "Launch the demo",
+      "shots": [
+        {
+          "src": "/images/decided.png",
+          "alt": "Decided",
+          "caption": "A notebook for what happened in a meeting."
+        }
+      ]
     }
   ]
 }
